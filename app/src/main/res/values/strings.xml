@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GuardianTech</string>
+    <string name="no_internet">No Internet Connection / No Data Received</string>
+    <string name="refresh">Refresh</string>
+    <string name="checkNewData">Checking for new articles</string>
+</resources>
