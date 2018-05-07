@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     public static final String LOG_TAG = MainActivity.class.getName();
     private static final String API_URL =
-            "https://content.guardianapis.com/search?&section=technology&format=json&show-fields=headline,thumbnail&show-tags=contributor&order-by=newest&api-key=92a6bab1-7a9b-47ef-ba60-7475b986fafb";
+            "https://content.guardianapis.com/search?&section=technology&format=json&show-fields=headline,thumbnail&show-tags=contributor&order-by=newest&api-key=test";
 
     // Custom Tabs variables
     public static final String CUSTOM_TAB_PACKAGE_NAME = "com.android.chrome";
@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private ProgressBar mspinner;
     private ImageView noData;
     RecyclerView recyclerView;
-    private List<Article> data = (new ArrayList<>());   //To check if this allows refreshed data to be added to adapter
 
     /**
      * Adapter for the list of articles
@@ -189,6 +188,5 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         Toast.makeText(this, R.string.checkNewData, Toast.LENGTH_SHORT).show();
         mAdapter.clearArticles();
         getLoaderManager().initLoader(1, null, this).forceLoad();
-        mAdapter.addData(data);
     }
 }
